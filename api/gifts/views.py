@@ -11,9 +11,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import time, os
 
-twilio_account_sid = 'ACa010d24cd6361dd5576d470aa7bd3877'
-twilio_auth_token = 'a5c5147c26ebe6485a79e4c39a1c3041'
-twilio_number = '+18645139083'
+twilio_account_sid = ''
+twilio_auth_token = ''
+twilio_number = ''
 
 email_sender = 'ilovewangmiao@gmail.com'
 email_passwd = 'wangmiao1221@'
