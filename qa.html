@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Love WangMiao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.loli.net/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.loli.net/css?family=Sacramento' rel='stylesheet'>
+
+    <!-- Animate.css -->
+    <link rel='stylesheet' href='css/animate.css'>
+    
+    <!-- Bootstrap  -->
+    <link rel='stylesheet' href='https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css'>
+
+    <!-- Theme style  -->
+    <link rel='stylesheet' href='css/style.css'>
+
+    <!-- Modernizr JS -->
+    <script src='https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js'></script>
+
+    <style>
+        #lovewangmiao-started .btn:hover{
+            height: 54px;
+            border: none !important;
+            background: #fff;
+            color: #F14E95;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 400;
+            padding-left: 50px;
+            padding-right: 50px;
+            overflow-x: auto; 
+        }
+
+        #lovewangmiao-started .btn{
+            overflow-x: hidden; 
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            overflow: -moz-scrollbars-none;
+        }
+        #lovewangmiao-started .btn::-webkit-scrollbar { 
+            display: none 
+        };
+    </style>
+</head>
+
+<body>
+
+    <div class='lovewangmiao-loader'></div>
+
+    <div id='page'>
+        <nav class='lovewangmiao-nav' role='navigation'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-3'>
+                        <div id='lovewangmiao-logo'><a href='index.html'>Love you<strong>.</strong></a></div>
+                    </div>
+                    <div class='col-xs-9 text-right menu-1'>
+                        <ul>
+                            <li class='active'><a href='index.html'>Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id='lovewangmiao-started' class='lovewangmiao-bg' style='background-image: url("https://ws1.sinaimg.cn/large/006tNbRwly1fy64zlc93dj31hc0u0kjm.jpg");'>
+            <div class='overlay'></div>
+            <div class='container'>
+                <div class='row animate-box'>
+                    <div class='col-md-8 col-md-offset-2 text-center lovewangmiao-heading'>
+                        <h2 id='question'></h2>
+                    </div>
+                </div>
+                <div class='row animate-box'>
+                    <div class='col-md-10 col-md-offset-1'>
+                        <div class='row'>
+                            <div class='col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2'>
+                                <button id='choice-a' type='button' class='btn btn-default btn-block'></button>
+                            </div>
+                            <div class='col-md-4 col-sm-4'>
+                                <button id='choice-b' type='button' class='btn btn-default btn-block'></button>
+                            </div>
+                        </div>
+                        <div style='height: 20px;'></div>
+                        <div class='row'>
+                            <div class='col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2'>
+                                <button id='choice-c' type='button' class='btn btn-default btn-block'></button>
+                            </div>
+                            <div class='col-md-4 col-sm-4'>
+                                <button id='choice-d' type='button' class='btn btn-default btn-block'></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src='https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+
+    <!-- jQuery Easing -->
+    <script src='https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+    <!-- Bootstrap -->
+    <script src='https://cdn.bootcss.com/twitter-bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+    <!-- Waypoints -->
+    <script src='https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js'></script>
+
+    <!-- countTo -->
+    <script src='https://cdn.bootcss.com/jquery-countto/1.2.0/jquery.countTo.js'></script>
+
+    <!-- Stellar -->
+    <script src='https://cdn.bootcss.com/stellar.js/0.6.2/jquery.stellar.min.js'></script>
+
+    <!-- Magnific Popup -->
+    <script src='https://cdn.bootcss.com/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js'></script>
+    <script src='js/magnific-popup-options.js'></script>
+
+    <!-- Main -->
+    <script src='js/main.js'></script>
+
+    <script src='js/heart.js'></script>
+
+
+    <script>
+        autoheight();
+        function autoheight() {
+            var winHeight = 0;
+            if (window.innerHeight)
+                winHeight = window.innerHeight;
+            else if ((document.body) && (document.body.clientHeight))
+                winHeight = document.body.clientHeight;
+            if (document.documentElement && document.documentElement.clientHeight)
+                winHeight = document.documentElement.clientHeight;
+            document.getElementById('lovewangmiao-started').style.height = winHeight + 'px';
+        }
+        window.onresize = autoheight;
+
+        function getCookie(name) {
+            var cookie_value = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookie_value = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookie_value;
+        }
+
+        $('#choice-a').click(function () {
+            if (answer[count] === 'a') {
+                count++;
+                if (count >= question.length) {
+                    window.location.href = gift_link;
+                }
+                $('#question').html(question[count]['question']);
+                $('#choice-a').html(question[count]['a']);
+                $('#choice-b').html(question[count]['b']);
+                $('#choice-c').html(question[count]['c']);
+                $('#choice-d').html(question[count]['d']);
+            }
+            else {
+                alert('选错啦 我可爱的大傻狗');
+            }
+        });
+
+        $('#choice-a').hover(
+            function () {
+                $('#choice-a').css('text-overflow', 'initial');
+            },
+            function () {
+                $('#choice-a').css('text-overflow', 'ellipsis');
+                $('#choice-a').scrollLeft(0);
+            },
+        );
+
+        $('#choice-b').click(function () {
+            if (answer[count] === 'b') {
+                count++;
+                if (count >= question.length) {
+                    window.location.href = gift_link;
+                }
+                $('#question').html(question[count]['question']);
+                $('#choice-a').html(question[count]['a']);
+                $('#choice-b').html(question[count]['b']);
+                $('#choice-c').html(question[count]['c']);
+                $('#choice-d').html(question[count]['d']);
+            }
+            else {
+                alert('选错啦 我可爱的大傻狗');
+            }
+        });
+
+        $('#choice-b').hover(
+            function () {
+                $('#choice-b').css('text-overflow', 'initial');
+            },
+            function () {
+                $('#choice-b').css('text-overflow', 'ellipsis');
+                $('#choice-b').scrollLeft(0);
+            },
+        );
+
+        $('#choice-c').click(function () {
+            if (answer[count] === 'c') {
+                count++;
+                if (count >= question.length) {
+                    window.location.href = gift_link;
+                }
+                $('#question').html(question[count]['question']);
+                $('#choice-a').html(question[count]['a']);
+                $('#choice-b').html(question[count]['b']);
+                $('#choice-c').html(question[count]['c']);
+                $('#choice-d').html(question[count]['d']);
+            }
+            else {
+                alert('选错啦 我可爱的大傻狗');
+            }
+        });
+
+        $('#choice-c').hover(
+            function () {
+                $('#choice-c').css('text-overflow', 'initial');
+            },
+            function () {
+                $('#choice-c').css('text-overflow', 'ellipsis');
+                $('#choice-c').scrollLeft(0);
+            },
+        );
+
+        $('#choice-d').click(function () {
+            if (answer[count] === 'd') {
+                count++;
+                if (count >= question.length) {
+                    window.location.href = gift_link;
+                }
+                $('#question').html(question[count]['question']);
+                $('#choice-a').html(question[count]['a']);
+                $('#choice-b').html(question[count]['b']);
+                $('#choice-c').html(question[count]['c']);
+                $('#choice-d').html(question[count]['d']);
+            }
+            else {
+                alert('选错啦 我可爱的大傻狗');
+            }
+        });
+
+        $('#choice-d').hover(
+            function () {
+                $('#choice-d').css('text-overflow', 'initial');
+            },
+            function () {
+                $('#choice-d').css('text-overflow', 'ellipsis');
+                $('#choice-d').scrollLeft(0);
+            },
+        );
+
+        $(document).ready(function () {
+            $.ajax({
+                url: '/api/gifts/qa',
+                method: 'GET',
+
+                success: function (json) {
+                    window.count = 0;
+                    window.question = json['question'];
+                    window.answer = json['answer'];
+                    window.gift_link = json['gift_link'];
+                    $('#question').html(question[count]['question']);
+                    $('#choice-a').html(question[count]['a']);
+                    $('#choice-b').html(question[count]['b']);
+                    $('#choice-c').html(question[count]['c']);
+                    $('#choice-d').html(question[count]['d']);
+                },
+
+                error: function (json) {
+                    console.log(json);
+                    alert(json['msg']);
+                    window.location.href = '/';
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

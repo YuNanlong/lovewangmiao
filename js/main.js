@@ -50,6 +50,16 @@
 				.slideUp(500, 'easeOutExpo');				
 		});
 
+		$('.offcanvas-has-dropdown').on('touchstart', function(){
+			var $this = $(this);
+			if($this.hasClass('active')) {
+				$this.removeClass('active').find('ul').slideUp(500, 'easeOutExpo');
+			}
+			else {
+				$this.addClass('active').find('ul').slideDown(500, 'easeOutExpo');
+			}
+		});
+
 
 		$(window).resize(function(){
 
@@ -141,7 +151,7 @@
 	};
 
 
-	var testimonialCarousel = function(){
+	/*var testimonialCarousel = function(){
 		var owl = $('.owl-carousel-fullwidth');
 		owl.owlCarousel({
 			items: 1,
@@ -153,7 +163,7 @@
 			smartSpeed: 800,
 			autoHeight: true,
 		});
-	};
+	};*/
 
 
 	var goToTop = function() {
@@ -217,11 +227,11 @@
 	$(function(){
 		mobileMenuOutsideClick();
 		parallax();
-		//offcanvasMenu();
+		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
 		dropdown();
-		testimonialCarousel();
+		//testimonialCarousel();
 		goToTop();
 		loaderPage();
 		counter();

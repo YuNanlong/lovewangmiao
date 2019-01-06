@@ -196,6 +196,9 @@ var photopile = (function() {
         fullSizeWidth  : null,   // will hold width of active thumbnail's fullsize image
         fullSizeHeight : null,   // will hold height of active thumbnail's fullsize image
         windowPadding  : 40,     // minimum space between container and edge of window (px)
+
+
+        putdown_func : function() { self.putDown(); },
         
         // Adds photo container elements to DOM.
         init : function() {
@@ -239,7 +242,7 @@ var photopile = (function() {
                 self.loadImage( thumb.getActiveImgSrc(), function() {
                     self.enlarge();
                     self.image.fadeTo(fadeDuration, '1');
-                    $('body').bind('click', function() { self.putDown(); }); // bind putdown event to body
+                    $('body').bind('click', self.putdown_func); // bind putdown event to body
                     /*$('body').bind('touchstart', function() { self.putDown(); });
 
                     $('body').bind("swiperight", function(e) {
@@ -284,7 +287,7 @@ var photopile = (function() {
         // Simulates putting a photo down, or returning to the photo pile.
         putDown : function( callback ) {
             self = this;
-            $('body').unbind();
+            $('body').unbind('click', self.putdown_func);
             self.hideInfo();
             navigator.hideControls();
             thumb.setZ( thumb.getActive(), numLayers );

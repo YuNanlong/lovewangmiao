@@ -1,143 +1,108 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>Love WangMiao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href='https://fonts.loli.net/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.loli.net/css?family=Sacramento' rel='stylesheet'>
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel='stylesheet' href='css/animate.css'>
+    
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css'>
 
     <!-- Theme style  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='css/style.css'>
 
     <!-- Modernizr JS -->
-    <script src="https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js"></script>
-
-    <!-- Photopile style-->
-    <link rel="stylesheet" href="css/photopile.css">
-
+    <script src='https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js'></script>
 </head>
 
 <body>
 
-    <div class="lovewangmiao-loader"></div>
+    <div class='lovewangmiao-loader'></div>
 
-    <div id="page">
-        <nav class="lovewangmiao-nav" role="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <div id="lovewangmiao-logo"><a href="index.html">Love you<strong>.</strong></a></div>
+    <div id='page'>
+        <nav class='lovewangmiao-nav' role='navigation'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-3'>
+                        <div id='lovewangmiao-logo'><a href='index.html'>Love you<strong>.</strong></a></div>
                     </div>
-                    <div class="col-xs-9 text-right menu-1">
+                    <div class='col-xs-9 text-right menu-1'>
                         <ul>
-                            <!-- TODO -->
-                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class='active'><a href='index.html'>Home</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <div id="lovewangmiao-started" class="lovewangmiao-bg" style="background-image:url('https://ws1.sinaimg.cn/large/006tNbRwly1fxvyngrj5mj31400u04qr.jpg');">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center lovewangmiao-heading">
+        <div id='lovewangmiao-started' class='lovewangmiao-bg' style='background-image:url("https://ws1.sinaimg.cn/large/006tNbRwly1fxvyngrj5mj31400u04qr.jpg");'>
+            <div class='overlay'></div>
+            <div class='container'>
+                <div class='row animate-box'>
+                    <div class='col-md-8 col-md-offset-2 text-center lovewangmiao-heading'>
                         <h2>Login</h2>
                         <p>Only my sweetheart can login</p>
                     </div>
                 </div>
-                <div class="row animate-box">
-                    <div class="col-md-10 col-md-offset-1">
-                        <form class="form-inline">
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="username" class="sr-only">Username</label>
-                                    <input type="username" class="form-control" id="username" placeholder="Username">
+                <div class='row animate-box'>
+                    <div class='col-md-10 col-md-offset-1'>
+                        <form class='form-inline'>
+                            <div class='col-md-4 col-sm-4'>
+                                <div class='form-group'>
+                                    <label for='username' class='sr-only'>Username</label>
+                                    <input type='username' class='form-control' id='username' placeholder='Username'>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="password" class="sr-only">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                            <div class='col-md-4 col-sm-4'>
+                                <div class='form-group'>
+                                    <label for='password' class='sr-only'>Password</label>
+                                    <input type='password' class='form-control' id='password' placeholder='Password'>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4">
-                                <button id="login-btn" type="button" class="btn btn-default btn-block">Login</button>
+                            <div class='col-md-4 col-sm-4'>
+                                <button id='login-btn' type='button' class='btn btn-default btn-block'>Login</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-        <!--<footer id="lovewangmiao-footer" role="contentinfo">
-			<div class="container">
-
-				<div class="row copyright">
-					<div class="col-md-12 text-center">
-						<p>
-							<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-							<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a
-								 href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-						</p>
-						<p>
-							<ul class="lovewangmiao-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							</ul>
-						</p>
-					</div>
-				</div>
-
-			</div>
-		</footer>-->
     </div>
 
     <!-- jQuery -->
-    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src='https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+
     <!-- jQuery Easing -->
-    <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src='https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js'></script>
+
     <!-- Bootstrap -->
-    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src='https://cdn.bootcss.com/twitter-bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
     <!-- Waypoints -->
-    <script src="https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-    <!-- Carousel -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src='https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js'></script>
+
     <!-- countTo -->
-    <script src="https://cdn.bootcss.com/jquery-countto/1.2.0/jquery.countTo.js"></script>
+    <script src='https://cdn.bootcss.com/jquery-countto/1.2.0/jquery.countTo.js'></script>
 
     <!-- Stellar -->
-    <script src="https://cdn.bootcss.com/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+    <script src='https://cdn.bootcss.com/stellar.js/0.6.2/jquery.stellar.min.js'></script>
     <!-- Magnific Popup -->
-    <script src="https://cdn.bootcss.com/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js"></script>
-    <script src="js/magnific-popup-options.js"></script>
+    <script src='https://cdn.bootcss.com/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js'></script>
+    <script src='js/magnific-popup-options.js'></script>
 
-    <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
-    <script src="js/simplyCountdown.js"></script>
     <!-- Main -->
-    <script src="js/main.js"></script>
+    <script src='js/main.js'></script>
 
-
-    <script src="https://cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="js/photopile.js"></script>
-
-
-    <script src="js/heart.js"></script>
+    <script src='js/heart.js'></script>
 
 
     <script>
-
         autoheight();
         function autoheight() {
             var winHeight = 0;
@@ -147,24 +112,9 @@
                 winHeight = document.body.clientHeight;
             if (document.documentElement && document.documentElement.clientHeight)
                 winHeight = document.documentElement.clientHeight;
-            document.getElementById("lovewangmiao-started").style.height = winHeight + 'px';
+            document.getElementById('lovewangmiao-started').style.height = winHeight + 'px';
         }
         window.onresize = autoheight;
-
-        function getCookie(name) {
-            var cookie_value = null;
-            if (document.cookie && document.cookie != '') {
-                var cookies = document.cookie.split(';');
-                for (var i = 0; i < cookies.length; i++) {
-                    var cookie = jQuery.trim(cookies[i]);
-                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                        cookie_value = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
-                    }
-                }
-            }
-            return cookie_value;
-        }
 
         $('#login-btn').click(function () {
             var username = $('#username').val();
@@ -201,7 +151,7 @@
 					console.log(json);
                     window.location.href = '/';
 				}
-			})
+			});
 		});
     </script>
 

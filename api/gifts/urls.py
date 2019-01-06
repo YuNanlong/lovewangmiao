@@ -18,5 +18,7 @@ from django.urls import path
 import api.gifts.views as gifts_views
 
 urlpatterns = [
-    path('index/', gifts_views.view_gifts),
+    path('qa', gifts_views.view_qa),
+    path('ticket', gifts_views.view_tickets),
+    path('gift', gifts_views.view_gifts),
 ]

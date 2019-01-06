@@ -1002,6 +1002,13 @@ form label {
   padding: 7em 0;
   clear: both;
 }
+
+#lovewangmiao-services {
+  display:flex;
+  display: -webkit-flex; 
+  align-items:center;
+}
+
 @media screen and (max-width: 768px) {
   #lovewangmiao-testimonial,
   #lovewangmiao-services,
@@ -1650,7 +1657,6 @@ form label {
   border-bottom: none !important;
 }
 @media screen and (max-width: 768px) {
-
   .lovewangmiao-nav-toggle {
     display: block;
   }
@@ -1888,12 +1894,12 @@ form label {
 
 @media (max-width: 768px) {
   .gototop a {
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     border-radius: 7.2px;
   }
   .gototop a i {
-    height: 90px;
+    height: 50px;
   } 
   .icon-arrow-up::before{
     font-size: 28.8px;
